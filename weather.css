@@ -1,0 +1,153 @@
+:root {
+    --bg: linear-gradient(135deg, #4facfe, #00f2fe);
+    --card-bg: rgb(240, 240, 240);
+    --text: #333;
+    --subtext: #666;
+    --box: #f4f6f8;
+    --btn: #4facfe;
+    --aqi: #e8f5e9;
+}
+
+body.dark {
+    --bg: linear-gradient(135deg, #1e1e2f, #111827);
+    --card-bg: #1f2933;
+    --text: #f9fafb;
+    --subtext: #9ca3af;
+    --box: #374151;
+    --btn: #6366f1;
+    --aqi: #065f46;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+.weather-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    cursor: pointer;
+    border: none;
+    background: var(--btn);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.search {
+    display: flex;
+    margin: 16px 0;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    outline: none;
+}
+
+.search button {
+    padding: 10px 14px;
+    border: none;
+    background: var(--btn);
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.time {
+    color: var(--subtext);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.temp {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.condition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.detail {
+    background: var(--box);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.aqi {
+    margin-top: 16px;
+    padding: 10px;
+    border-radius: 12px;
+    background: var(--aqi);
+    font-weight: bold;
+    text-align: center;
+}
+
+.forecast {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.day {
+    background: var(--box);
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 0.85rem;
+}
+
+.day img {
+    width: 40px;
+}
+
+.error {
+    color: #ef4444;
+    text-align: center;
+    font-weight: bold;
+}
