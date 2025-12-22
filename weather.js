@@ -69,4 +69,5 @@ function searchCity() {
     if (city) fetchWeather(city);
 }
 
-fetchWeather("London");
+
+fetchWeather("Gwalior");
